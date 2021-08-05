@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/public/css/general.css">
+    <title>Login</title>
 </head>
-<body>
-    
+<body class="login">
+  <div>
+    <form action="/views/index.html" method="POST" class="card">
+                <i class="far fa-times-circle" id="close"></i>
+                <h1> Iniciar Sesion</h1>
+        <input class="card__input input--style" type="text" name="email" placeholder="E-mail" required>
+        <span class="validationError email--absolute" >Ingresa un email valido</span>
+        <input class="card__input input--style" type="password" name="contraseña" id="" placeholder="Contraseña" required>
+        <span class="validationError contraseña--absolute">Contraseña</span>
+        <a href="" class="card__enlace">
+            <span class="card__text">¿Olvide mi contraseña?</span>
+        </a>
+        <input type="button" role="button" value="Registrarse" class="button button--positionRegister">
+        <input type="submit" role="button" value="Ingresar" class="button button--positionIngresar">  
+        </div>
+        </form>
+
 </body>
+
 </html>

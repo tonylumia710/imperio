@@ -1,0 +1,26 @@
+@import url('login.css');
+@import url('register.css');
+@import url('variables.css');
+@import url('password.css');
+@import url('index.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.validationError{
+    position: absolute;
+    color: rgb(8, 1, 1);
+    line-height: 18px;
+    font-size: 13px;
+}
+
+
