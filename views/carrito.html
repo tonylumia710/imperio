@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muebleria Imperio</title>
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">   
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Fuente del guason -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    
+
+     <!-- Scripts Locales -->
+    <script src="/js/header.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
+    <script src="/js/carrito.js" defer></script>
+</head>
+<body>
+    <header >
+        <div class="main-header">
+
+        <div class="logo">
+            <img src="/images/logo/logoimperio.png" alt="">
+        </div>  
+        
+        <i class="fas fa-bars burguer-menu-icon" onclick="dropMenu()"></i>
+        
+        <!-- Menu de navegacion mobil-->
+        <nav class="navigation-bar" id="navigation-bar-mobile">
+            
+            <div class="user-icons-mobile">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div> 
+            
+            <!-- elementos del menu (categorias) -->
+            <ul class="menu">
+                <li class="dropdown-menu" onclick="dropSubCategoryMenu(`cocina`)">
+                    COCINA
+                    <i class="fas fa-chevron-down" ></i>
+                </li>
+                <li class="dropdown-menu" onclick="dropSubCategoryMenu(`comedor`)">
+                    COMEDOR
+                    <i class="fas fa-chevron-down" ></i>
+                </li>
+                <li class="dropdown-menu" onclick="dropSubCategoryMenu(`dormitorio`)">
+                    DORMITORIO
+                    <i class="fas fa-chevron-down" ></i>
+                <li class="dropdown-menu" onclick="dropSubCategoryMenu(`living`)">
+                    LIVING
+                    <i class="fas fa-chevron-down" ></i>
+                <li class="dropdown-menu" onclick="dropSubCategoryMenu(`oficina`)">
+                    OFICINA
+                    <i class="fas fa-chevron-down" ></i>        
+                </li>
+                
+        </nav> 
+
+          <!-- Menu navegacion escritorio-->
+        <nav class="navigation-bar" id="navigation-bar-desktop">
+        <!--elementos del menu (categorias)-->
+        <ul class="menu">
+            <li class="dropdown-menu" onclick="dropSubCategoryMenu(`cocina`)">
+                COCINA
+                <i class="fas fa-chevron-down" ></i>
+            </li>
+            <li class="dropdown-menu" onclick="dropSubCategoryMenu(`comedor`)">
+                COMEDOR
+                <i class="fas fa-chevron-down" ></i>
+            </li>
+            <li class="dropdown-menu" onclick="dropSubCategoryMenu(`dormitorio`)">
+                DORMITORIO
+                <i class="fas fa-chevron-down" ></i>
+            <li class="dropdown-menu" onclick="dropSubCategoryMenu(`living`)">
+                LIVING
+                <i class="fas fa-chevron-down" ></i>
+            <li class="dropdown-menu" onclick="dropSubCategoryMenu(`oficina`)">
+                OFICINA
+                <i class="fas fa-chevron-down" ></i>        
+            </li>
+            
+        </ul>
+        </nav> 
+
+        <!-- Icono del buscador en header mobil-->
+        <div class="search-icon" onclick="dropSearch()">
+            <i class="fas fa-search"></i>
+        </div>
+        
+        <!-- Buscador escritorio -->
+        <form action="#" class="search-form-desktop">
+            <div class="search-bar">
+                <input type="search" name="busqueda" id="">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+
+        <div class="user-icons-desktop">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"><button><a href="/views/carrito.html"></a></button></i>
+        </div>  
+    
+
+    </div>
+        
+    <nav class="nav_menu">        
+        <!--Buscador mobil-->
+        
+        <form action="#" class="search-form-mobile" id="search">
+            <div class="search-bar">
+                <input type="search" name="busqueda" id="" placeholder="Buscar">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+
+        <!--Subcategorias desplegables-->
+
+        <div class="subcategory_menu" id="cocina">
+            <div class="subcategory_header"><h3>COCINA</h3><img src="/images/close.png" onclick="closeWindow()" alt=""></div>
+            <ul>
+                <li><a href="">Mueble 1</a></li>
+                <li><a href="">Mueble 2</a></li>                
+            </ul>
+          
+        </div>
+
+        <div class="subcategory_menu" id="comedor">
+            <div class="subcategory_header"><h3>COMEDOR</h3><img src="/images/close.png" onclick="closeWindow()" alt=""></div>
+            <ul> 
+                <li><a href="">Mueble 1</a></li>
+                <li><a href="">Mueble 2</a></li>                
+            </ul>
+           
+        </div>
+
+        <div class="subcategory_menu" id="dormitorio">
+            <div class="subcategory_header"><h3>DORMITORIO</h3><img src="/images/close.png" onclick="closeWindow()" alt=""></div>
+            <ul>
+                <li><a href="">Mueble 1</a></li>
+                <li><a href="">Mueble 2</a></li>                
+            </ul>
+        </div>
+        <div class="subcategory_menu" id="living">
+            <div class="subcategory_header"><h3>LIVING</h3><img src="/images/close.png" onclick="closeWindow()" alt=""></div>
+            <ul>
+                <li><a href="">Mueble 1</a></li>
+                <li><a href="">Mueble 2</a></li>                
+            </ul>
+        </div>
+        <div class="subcategory_menu" id="oficina">
+            <div class="subcategory_header"><h3>OFICINA</h3><img src="/images/close.png" onclick="closeWindow()" alt=""></div>
+            <ul>
+                <li><a href="">Mueble 1</a></li>
+                <li><a href="">Mueble 2</a></li>                
+            </ul>
+        </div>
+    </nav>
+
+    </header>
+
+    <div class="container-carrito">
+        <h1>Carrito</h1>
+
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Imagen</label>
+    <label class="product-details">Producto</label>
+    <label class="product-price">Precio</label>
+    <label class="product-quantity">Cantidad</label>
+    <label class="product-removal">Remover</label>
+    <label class="product-line-price">Total</label>
+  </div>
+
+  <div class="product">
+    <div class="product-image">
+      <img src="/images/silla.jpg">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Silla de pino</div>
+      <p class="product-description">Silla estilo nordico realizada en madera de pino de primera calidad</p>
+    </div>
+    <div class="product-price">1785,00</div>
+    <div class="product-quantity">
+      <input type="number" value="2" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remover
+      </button>
+    </div>
+    <div class="product-line-price">3570,00</div>
+  </div>
+
+  <div class="product">
+    <div class="product-image">
+      <img src="/images/mueble.jpg">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Modular Casis</div>
+      <p class="product-description">Modula de cedro de 4 estantes y 3 puertas. medidas 160x190cm</p>
+    </div>
+    <div class="product-price">19.367,00</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remover
+      </button>
+    </div>
+    <div class="product-line-price">19.367,00</div>
+  </div>
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">22.937,00</div>
+    </div>
+    <div class="totals-item">
+      <label>iva (5%)</label>
+      <div class="totals-value" id="cart-tax">4.538,35</div>
+    </div>
+    <div class="totals-item">
+      <label>Envio</label>
+      <div class="totals-value" id="cart-shipping">1200,00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Total</label>
+      <div class="totals-value" id="cart-total">28.675,35</div>
+    </div>
+  </div>
+      
+      <button class="checkout"><a href="/home">Pagar</a></button>
+
+
+</div>
+<button><a href="/views/carrito.html"></a></button>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+    </div>
+    
+    <footer>
+      <div class="logo">
+        <p>muebleria imperio</p>
+      </div>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <section class="empresa">
+        <h4>empresa</h4>
+        <ul>
+          <li><a href="">quienes somos</a></li>
+          <li><a href="">políticas de privacidad</a></li>
+          <li><a href="">terminos y condiciones</a></li>
+        </ul>
+      </section>
+      <section class="contacto">
+        <h4>contacto</h4>
+        <ul>
+          <li>ciudad de buenos aires</li>
+          <li class="number">+54 9 11 24148896</li>
+          <li>muebleriaimperio@gmail.com</li>
+        </ul>
+      </section>
+      <form action="">
+        <label for="">¿Te encantan las ofertas?</label>
+        <div>
+          <input class="input-style" type="text" name="nombre" placeholder="Nombre">
+        </div>
+        <div>
+          <input class="input-style" type="email" name="emailUsuario" placeholder="Email">
+        </div>
+        <div>
+          <button class="button" type="submit">Suscribir</button>
+        </div>
+      </form>
+    </footer>     
+</body>
