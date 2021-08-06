@@ -23,4 +23,15 @@ app.get('/password', (req, res) => {
     res.sendFile(path.join(__dirname,'views/password.html')); 
 })
 
+app.get('/carrousel.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/carrousel.html'))
+})
+
+app.get('/carrito.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/carrito.html'))
+})
+
+app.get('/header.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/header.html'))
+})
 app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}\n http://localhost:${port}`));

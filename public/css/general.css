@@ -1,19 +1,16 @@
-@import url('login.css');
-@import url('register.css');
 @import url('variables.css');
-@import url('password.css');
-@import url('index.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('home.css');
+@import url('carousel.css');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
+
 
 
 .validationError{
