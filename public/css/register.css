@@ -1,0 +1,62 @@
+.register {
+    background-color: rgba(255, 255, 255, 0.5);
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+
+}
+.register .card {
+    background-color: white;
+    position        : relative;
+    width           : 320px;
+    height          : 400px;
+    box-shadow: 0 0 10px var(--bordes);
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    gap             : 20px;
+    border-radius   : 10px;
+    background: linear-gradient(
+        150deg
+        ,#d4d110, white, rgb(59, 47, 49));
+    background-size: 400% 300%;
+    animation: BgGradient 5s ease infinite;
+
+}
+
+.register .button:hover {
+    border          : 1px solid var(--shadows);
+    transform       : scale(1.02);
+    background-color: var(--fondo-claro);
+}
+
+.register .button--positionRegister {
+   bottom  : 20px;
+
+}
+
+#close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    color: #2b2604;
+    cursor: pointer;
+}
+
+label {
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+     
+      margin-top: 0;
+    }
+}
+
+
+  

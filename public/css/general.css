@@ -1,0 +1,23 @@
+@import url('variables.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('home.css');
+@import url('carousel.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.validationError{
+    position: absolute;
+    color: rgb(8, 1, 1);
+    line-height: 18px;
+    font-size: 13px;
+}
+
+
