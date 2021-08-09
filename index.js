@@ -8,7 +8,7 @@ app.use(express.static('public'));
 /* Ruta para Home*/
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'views/index.html'));
+    res.sendFile(path.join(__dirname,'/views/index.html'));
 })
 
 app.get('/register', (req, res) => {
@@ -27,7 +27,7 @@ app.get('/carrousel.html', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/carrousel.html'))
 })
 
-app.get('/carrito.html', (req, res) => {
+app.get('/carrito', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/carrito.html'))
 })
 

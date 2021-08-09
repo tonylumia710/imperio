@@ -6,9 +6,8 @@
 
 }
 .register .card {
-    background-color: white;
     position        : relative;
-    width           : 320px;
+    width           : 420px;
     height          : 400px;
     box-shadow: 0 0 10px var(--bordes);
     display         : flex;
@@ -18,10 +17,9 @@
     border-radius   : 10px;
     background: linear-gradient(
         150deg
-        ,#d4d110, white, rgb(59, 47, 49));
-    background-size: 400% 300%;
+        ,#0e0d0d, #d4af37, rgb(59, 47, 49));
     animation: BgGradient 5s ease infinite;
-
+       margin-top: 20px;
 }
 
 .register .button:hover {
@@ -35,20 +33,13 @@
 
 }
 
-#close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 20px;
-    color: #2b2604;
-    cursor: pointer;
-}
 
 label {
     display: flex;
     justify-content: initial;
     align-items: center;
     font-size: 15px;
+    color: black;
 }
 
 @media screen and (max-width: 600px) {
