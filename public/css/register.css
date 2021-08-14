@@ -34,7 +34,7 @@
 }
 
 
-label {
+.register label {
     display: flex;
     justify-content: initial;
     align-items: center;

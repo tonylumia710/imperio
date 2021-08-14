@@ -189,20 +189,25 @@
     </nav>
 
   </header>
-
+ <!--body-->
   <div class="login">
     <form action="/views/index.html" method="POST" class="card">
-      <h1> Iniciar Sesion</h1>
-      <input class="card__input input--style" type="text" name="email" placeholder="E-mail" required>
-      <span class="validationError email--absolute" >Ingresa un email valido</span>
-      <input class="card__input input--style" type="password" name="contraseña" id="" placeholder="Contraseña" required>
-      <span class="validationError contraseña--absolute">Contraseña</span>
-          <a href="/password" class="card__enlace">
-        <span class="card__text">¿Olvide mi contraseña?</span>
-          </a>
-        
+        <div>
+          <h1> Iniciar Sesion</h1>
+         </div> 
+        <input class="card__input input--style" type="text" name="email" placeholder="E-mail" required>
+        <span class="validationError email--absolute" >Ingresa un email valido</span>
+        <input class="card__input input--style" type="password" name="contraseña" id="" placeholder="Contraseña" required>
+        <span class="validationError contraseña--absolute">Contraseña</span>
+        <a href="/password" class="card__enlace">
+          <span class="card__text">¿Olvide mi contraseña?</span>
+        </a>
         <a href="http://localhost:3000/register"><input type="button" role="button" value="Registrarse" class="button button--positionRegister"></a>
         <input type="submit" role="button" value="Ingresar" class="button button--positionIngresar">
+        <div class="check">
+           <input class= "RecordarChecbox"type="checkbox" name="Recordar" > 
+           <label class="Recordar" for="Recordar">  Recordarme </label>
+        </div>
     </form>
   </div>
  <!--Carrousel-->

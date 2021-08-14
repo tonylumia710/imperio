@@ -6,14 +6,7 @@
     padding: 0 8px;
   }
   
-  /* Display the columns below each other instead of side by side on small screens */
-  @media screen and (max-width: 400px) {
-    .column {
-      width: 100%;
-      height: 100vh;
-      display: block;
-    }
-  }
+  
     
   /* Add some shadows to create a card effect */
   .card {
@@ -67,6 +60,7 @@
   .button:hover {
     background-color: #555;
   }
+
   h2 {
     padding-bottom: 10px;
     text-align: center;
@@ -74,3 +68,20 @@
     margin-top: 10px;
     border-bottom: rgba(136, 128, 128, 0.42) 1px solid;
 }
+/* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 768px) {
+    .column {
+      width: 100%;
+      height: 71vh;
+      display: block;
+    }
+  }
+ 
+
+  /* Display the columns below each other instead of side by side on small screens */
+@media screen and (min-width: 426px) and  (max-width: 768px){
+  .column {
+    float: left;
+    width: 50%;
+    margin-bottom: 16px;
+    padding: 0 8px;
