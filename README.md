@@ -1,6 +1,6 @@
 # E-COMMERCE
 <br>
-<img height="700" src="https://github.com/RicardojArroyo/grupo_1_muebleiaImperio_c8/blob/main/design/logo.png"/>
+<img height="300" src="https://github.com/RicardojArroyo/grupo_1_muebleiaImperio_c8/blob/main/design/logo.png"/>
 <br>
 Este e-comerce será el medio digital para vender muebles de oficina y para el hogar.
 Está dirigido a todo público con poder de compra, debido a la amplia variedad de muebles que se ofrecen.
