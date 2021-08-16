@@ -1,110 +1,155 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  text-decoration: none;
+}
+footer{
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: black;
+}
+footer .content{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content p,a{
+  color: #fff;
+}
+footer .content .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+
+}
+footer .content p{
+  text-align: justify;
+}
+footer .content .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .content .lower i{
+  padding-right: 16px;
+}
+footer .content .middle{
+  padding-left: 80px;
+}
+footer .content .middle a{
+  line-height: 32px;
+}
+footer .content .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: white;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .content .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: black;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #D4AF37;
+  transition: all 0.3s ease-in-out;
+}
+.content .right input[type="submit"]:hover{
+  background: none;
+  color:  black;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+footer div.media-icons {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-footer li {
-    list-style: none;
-    font-variant: small-caps;
+footer .content .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.content .media-icons a:hover{
+  border-color: #D4AF37;
+}
+footer .bottom{
+  width: 100%;
+  text-align: right;
+  color: #d9d9d9;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #D4AF37;
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: white;
+}
+@media (max-width:1100px) {
+  footer .content .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .content .box{
+    width: 50%;
+  }
+  .content .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .content .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content .middle{
+    padding-left: 0;
+  }
 }
 
-footer {
-    background-color: black;
-    color: white;
-    padding: 30px 0 30px;
+.logofooter img{
+  display: flex;
+  align-self: center;
+  width: 160px;
+  height: 100px;
 }
 
-footer .logo {
-    background-color: white;
-    height: 20px;
-    width: 180px;
-    margin: 0 auto 15px;
-}
-
-footer .logo p {
-    color: black;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-footer .socials {
-    text-align: center;
-    font-size: 20px;
-}
-
-footer .socials a {
-    margin: 0 10px 0px;
-}
-
-footer section.empresa {
-    margin-top: 35px;
-}
-
-footer section.contacto {
-    margin-top: 35px;
-}
-
-footer section h4{
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-footer section li {
-    text-align: center;
-}
-
-footer section.contacto li.number {
-    font-size: 13px;
-}
-
-footer form {
-    text-align: center;
-    margin-top: 35px;
-}
-
-footer input.input-style {
-    color: black;
-    background-color: white;
-    height: 1.5rem;
-    margin-top: 10px;
-    border: solid 1px grey;
-    padding: 0.5rem;
-}
-
-footer input.input-style:focus {
-    box-shadow: none;
-    outline: none;
-}
-
-footer .input-style::placeholder {
-    color: grey;
-}
-
-footer input.input-style::focus {
-    outline: none;
-}
-
-footer .button {
-    background-color: white;
-    width: 90px;
-    height: 30px;
-    border: solid 2px grey;
-    margin-top: 20px;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    transition-duration: 0.5s;
-}
-
-footer .button:hover {
-    background-color: black;
-    color: white;
-    border: solid 2px white;
+.right box{
+  display: flex;
+  justify-content: end;
+  width: 120px;
+  height: 120px;
 }

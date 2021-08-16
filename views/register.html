@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="/css/general.css">
   <link rel="stylesheet" href="/css/register.css">
   <!-- Fonts -->
@@ -38,260 +39,271 @@
   <script src="/js/carousel.js" defer></script>
   <script src="/js/carrito.js" defer></script>
 
-    <title>Registro</title>
+  <title>Registro</title>
 </head>
+
 <body>
-    <header>
-        <div class="main-header">
-    
-          <div class="logo">
-            <a href="http://localhost:3000"><img src="/images/logo/logoimperio.png" alt=""></a>
+  <header>
+    <div class="main-header">
+
+      <div class="logo">
+        <a href="http://localhost:3000"><img src="/images/logo/logoimperio.png" alt=""></a>
+      </div>
+
+      <i class="fas fa-bars burguer-menu-icon" onclick="dropMenu()"></i>
+
+      <!-- Menu de navegacion mobil-->
+      <nav class="navigation-bar" id="navigation-bar-mobile">
+
+        <div class="user-icons-mobile">
+          <a href="/login"><i class="fas fa-user"></i></a>
+          <a href="carrito"><i class="fas fa-shopping-cart"></i></a>
         </div>
-    
-          <i class="fas fa-bars burguer-menu-icon" onclick="dropMenu()"></i>
-    
-          <!-- Menu de navegacion mobil-->
-          <nav class="navigation-bar" id="navigation-bar-mobile">
-    
-            <div class="user-icons-mobile">
-              <a href="/login"><i class="fas fa-user"></i></a>
-              <a href="carrito"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-    
-            <!-- elementos del menu (categorias) -->
-            <ul class="menu">
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`cocina`)">
-                COCINA
-                <i class="fas fa-chevron-down"></i>
-              </li>
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`comedor`)">
-                COMEDOR
-                <i class="fas fa-chevron-down"></i>
-              </li>
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`dormitorio`)">
-                DORMITORIO
-                <i class="fas fa-chevron-down"></i>
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`living`)">
-                LIVING
-                <i class="fas fa-chevron-down"></i>
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`oficina`)">
-                OFICINA
-                <i class="fas fa-chevron-down"></i>
-              </li>
-    
-          </nav>
-    
-          <!-- Menu navegacion escritorio-->
-          <nav class="navigation-bar" id="navigation-bar-desktop">
-            <!--elementos del menu (categorias)-->
-            <ul class="menu">
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`cocina`)">
-                COCINA
-                <i class="fas fa-chevron-down"></i>
-              </li>
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`comedor`)">
-                COMEDOR
-                <i class="fas fa-chevron-down"></i>
-              </li>
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`dormitorio`)">
-                DORMITORIO
-                <i class="fas fa-chevron-down"></i>
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`living`)">
-                LIVING
-                <i class="fas fa-chevron-down"></i>
-              <li class="dropdown-menu" onclick="dropSubCategoryMenu(`oficina`)">
-                OFICINA
-                <i class="fas fa-chevron-down"></i>
-              </li>
-    
-            </ul>
-          </nav>
-    
-          <!-- Icono del buscador en header mobil-->
-          <div class="search-icon" onclick="dropSearch()">
-            <i class="fas fa-search"></i>
-          </div>
-    
-          <!-- Buscador escritorio -->
-          <form action="#" class="search-form-desktop">
-            <div class="search-bar">
-              <input type="search" name="busqueda" id="">
-              <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-          </form>
-    
-          <div class="user-icons-desktop">
-            <a href="/login"><i class="fas fa-user"></i></a>
-            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-    
-    
+
+        <!-- elementos del menu (categorias) -->
+        <ul class="menu">
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`cocina`)">
+            COCINA
+            <i class="fas fa-chevron-down"></i>
+          </li>
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`comedor`)">
+            COMEDOR
+            <i class="fas fa-chevron-down"></i>
+          </li>
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`dormitorio`)">
+            DORMITORIO
+            <i class="fas fa-chevron-down"></i>
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`living`)">
+            LIVING
+            <i class="fas fa-chevron-down"></i>
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`oficina`)">
+            OFICINA
+            <i class="fas fa-chevron-down"></i>
+          </li>
+
+      </nav>
+
+      <!-- Menu navegacion escritorio-->
+      <nav class="navigation-bar" id="navigation-bar-desktop">
+        <!--elementos del menu (categorias)-->
+        <ul class="menu">
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`cocina`)">
+            COCINA
+            <i class="fas fa-chevron-down"></i>
+          </li>
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`comedor`)">
+            COMEDOR
+            <i class="fas fa-chevron-down"></i>
+          </li>
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`dormitorio`)">
+            DORMITORIO
+            <i class="fas fa-chevron-down"></i>
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`living`)">
+            LIVING
+            <i class="fas fa-chevron-down"></i>
+          <li class="dropdown-menu" onclick="dropSubCategoryMenu(`oficina`)">
+            OFICINA
+            <i class="fas fa-chevron-down"></i>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Icono del buscador en header mobil-->
+      <div class="search-icon" onclick="dropSearch()">
+        <i class="fas fa-search"></i>
+      </div>
+
+      <!-- Buscador escritorio -->
+      <form action="#" class="search-form-desktop">
+        <div class="search-bar">
+          <input type="search" name="busqueda" id="">
+          <button type="submit"><i class="fas fa-search"></i></button>
         </div>
-    
-        <nav class="nav_menu">
-          <!--Buscador movil-->
-    
-          <form action="#" class="search-form-mobile" id="search">
-            <div class="search-bar">
-              <input type="search" name="busqueda" id="" placeholder="Buscar">
-              <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-          </form>
-    
-          <!--Subcategorias desplegables-->
-    
-          <div class="subcategory_menu" id="cocina">
-            <div class="subcategory_header">
-              <h3>COCINA</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
-            </div>
-            <ul>
-              <li><a href="">Mueble 1</a></li>
-              <li><a href="">Mueble 2</a></li>
-            </ul>
-    
-          </div>
-    
-          <div class="subcategory_menu" id="comedor">
-            <div class="subcategory_header">
-              <h3>COMEDOR</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
-            </div>
-            <ul>
-              <li><a href="">Mueble 1</a></li>
-              <li><a href="">Mueble 2</a></li>
-            </ul>
-    
-          </div>
-    
-          <div class="subcategory_menu" id="dormitorio">
-            <div class="subcategory_header">
-              <h3>DORMITORIO</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
-            </div>
-            <ul>
-              <li><a href="">Mueble 1</a></li>
-              <li><a href="">Mueble 2</a></li>
-            </ul>
-          </div>
-          <div class="subcategory_menu" id="living">
-            <div class="subcategory_header">
-              <h3>LIVING</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
-            </div>
-            <ul>
-              <li><a href="">Mueble 1</a></li>
-              <li><a href="">Mueble 2</a></li>
-            </ul>
-          </div>
-          <div class="subcategory_menu" id="oficina">
-            <div class="subcategory_header">
-              <h3>OFICINA</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
-            </div>
-            <ul>
-              <li><a href="">Mueble 1</a></li>
-              <li><a href="">Mueble 2</a></li>
-            </ul>
-          </div>
-        </nav>
-    
-      </header>
-    
-    <main class="home">
+      </form>
+
+      <div class="user-icons-desktop">
+        <a href="/login"><i class="fas fa-user"></i></a>
+        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+
+
+    </div>
+
+    <nav class="nav_menu">
+      <!--Buscador movil-->
+
+      <form action="#" class="search-form-mobile" id="search">
+        <div class="search-bar">
+          <input type="search" name="busqueda" id="" placeholder="Buscar">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </form>
+
+      <!--Subcategorias desplegables-->
+
+      <div class="subcategory_menu" id="cocina">
+        <div class="subcategory_header">
+          <h3>COCINA</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
+        </div>
+        <ul>
+          <li><a href="">Mueble 1</a></li>
+          <li><a href="">Mueble 2</a></li>
+        </ul>
+
+      </div>
+
+      <div class="subcategory_menu" id="comedor">
+        <div class="subcategory_header">
+          <h3>COMEDOR</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
+        </div>
+        <ul>
+          <li><a href="">Mueble 1</a></li>
+          <li><a href="">Mueble 2</a></li>
+        </ul>
+
+      </div>
+
+      <div class="subcategory_menu" id="dormitorio">
+        <div class="subcategory_header">
+          <h3>DORMITORIO</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
+        </div>
+        <ul>
+          <li><a href="">Mueble 1</a></li>
+          <li><a href="">Mueble 2</a></li>
+        </ul>
+      </div>
+      <div class="subcategory_menu" id="living">
+        <div class="subcategory_header">
+          <h3>LIVING</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
+        </div>
+        <ul>
+          <li><a href="">Mueble 1</a></li>
+          <li><a href="">Mueble 2</a></li>
+        </ul>
+      </div>
+      <div class="subcategory_menu" id="oficina">
+        <div class="subcategory_header">
+          <h3>OFICINA</h3><img src="/images/close.png" onclick="closeWindow()" alt="">
+        </div>
+        <ul>
+          <li><a href="">Mueble 1</a></li>
+          <li><a href="">Mueble 2</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <main class="home">
     <div class="register">
-        <form action="/register.html" method="post" class="card">
-         <h1>Crear Cuenta</h1>
-         <div class="formulario">
-            <label for="nombre">Nombre:</label>
-            <input type="text" placeholder="Ingrese su nombre" name="nombre" id="nombre" required><br>
-    
-            <label for="apellido">Apellido:</label>
-            <input type="text" placeholder="Ingrese apellido" name="apellido" required><br>
-    
-            <label for="email">Email:</label>
-            <input type="email" placeholder="Ingrese email" name="email" required><br>
-           
-            <label for="pass">Password:</label>
-            <input type="password" placeholder="Password" name="pass" required><br>
+      <form action="/register.html" method="post" class="card">
+        <h1>Crear Cuenta</h1>
+        <div class="formulario">
+          <label for="nombre">Nombre:</label>
+          <input type="text" placeholder="Ingrese su nombre" name="nombre" id="nombre" required><br>
 
-            <label for="pass">Confirmar Password:</label>
-            <input type="password" placeholder="password" name="pass" required><br>
-        
+          <label for="apellido">Apellido:</label>
+          <input type="text" placeholder="Ingrese apellido" name="apellido" required><br>
+
+          <label for="email">Email:</label>
+          <input type="email" placeholder="Ingrese email" name="email" required><br>
+
+          <label for="pass">Password:</label>
+          <input type="password" placeholder="Password" name="pass" required><br>
+
+          <label for="pass">Confirmar Password:</label>
+          <input type="password" placeholder="password" name="pass" required><br>
+
+        </div>
+
+        <button class="button button--positionRegister" onclick="validate()" id="button"
+          type="submit">Registrarse</button>
+        <a href="/login">
+      </form>
+    </div>
+    <!--Carrousel-->
+    <section class="carousel-container">
+
+      <div class="slides fade">
+        <img src="/images/banners/banner5.jpg" alt="">
+      </div>
+
+      <div class="slides fade">
+        <img src="/images/banners/banner6.jpg" alt="">
+      </div>
+
+      <div class="slides fade">
+        <img src="/images/banners/banner7.jpg" alt="">
+      </div>
+
+      <div class="slides fade">
+        <img src="/images/banners/banner8.jpg" alt="">
+      </div>
+
+      <!--Flechas de desplazamiento -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!--Selectores de banner-->
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+
+      </div>
+    </section>
+    <!-- Fin carrousel -->
+  </main>
+
+  <footer>
+    <div class="logofooter">
+      <img src="/LogoImperio.png" alt="">
+    </div>
+    <div class="content">
+      <div class="left box">
+        <div class="upper">
+          <div class="topic">Sobre nosotros</div>
+          <p>strújem bombáchem</p>
+        </div>
+        <div class="lower">
+          <div class="topic">Contactanos</div>
+          <div class="phone">
+            <a href="#"><i class="fas fa-phone-volume"></i>+54 11xxxxxxx</a>
           </div>
-         
-          <button class="button button--positionRegister"onclick="validate()" id="button" type="submit">Registrarse</button>
-                <a href="/login">
+          <div class="email">
+            <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="middle box">
+        <div class="topic">Productos</div>
+        <div><a href="#">Cocina</a></div>
+        <div><a href="#">Comedor</a></div>
+        <div><a href="#">Dormitorio</a></div>
+        <div><a href="#">Living</a></div>
+        <div><a href="#">Oficina</a></div>
+      </div>
+      <div class="right box">
+        <div class="topic">Te encantan nuestras ofertas? Suscribite</div>
+        <form action="#">
+          <input type="text" placeholder="Ingresa tu mail">
+          <input type="submit" name="" value="Suscribir">
+          <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
         </form>
+      </div>
     </div>
-      <!--Carrousel-->
-      <section class="carousel-container">
-
-        <div class="slides fade">
-          <img src="/images/banners/banner5.jpg" alt="">
-        </div>
-
-        <div class="slides fade">
-          <img src="/images/banners/banner6.jpg" alt="">
-        </div>
-
-        <div class="slides fade">
-          <img src="/images/banners/banner7.jpg" alt="">
-        </div>
-
-        <div class="slides fade">
-          <img src="/images/banners/banner8.jpg" alt="">
-        </div>
-
-        <!--Flechas de desplazamiento -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <!--Selectores de banner-->
-        <div class="dots">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-
-        </div>
-      </section>
-      <!-- Fin carrousel -->
-    </main>
-
-<footer>
-  <div class="logo">
-    <p>muebleria imperio</p>
-  </div>
-  <div class="socials">
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-  </div>
-  <section class="empresa">
-    <h4>empresa</h4>
-    <ul>
-      <li><a href="">quienes somos</a></li>
-      <li><a href="">políticas de privacidad</a></li>
-      <li><a href="">terminos y condiciones</a></li>
-    </ul>
-  </section>
-  <section class="contacto">
-    <h4>contacto</h4>
-    <ul>
-      <li>ciudad de buenos aires</li>
-      <li class="number">+54 9 11 24148896</li>
-      <li>muebleriaimperio@gmail.com</li>
-    </ul>
-  </section>
-  <form action="">
-    <label for="">¿Te encantan las ofertas?</label>
-    <div>
-      <input class="input-style" type="text" name="nombre" placeholder="Nombre">
+    <div class="bottom">
+      <p>Copyright © 2021 <a href="#">Grupo 1 Com. 8 Formar - Digital House</a> derechos reservados</p>
     </div>
-    <div>
-      <input class="input-style" type="email" name="emailUsuario" placeholder="Email">
-    </div>
-    <div>
-      <button class="button" type="submit">Suscribir</button>
-    </div>
-  </form>
-</footer> 
+  </footer>
 
 </body>
+
 </html>
