@@ -3,6 +3,8 @@
   padding: 0px 30px 30px 20px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 100;
+    max-width: 93%;
+    text-align: center;
 }
 
 .product-image {
@@ -136,7 +138,7 @@
   .totals .totals-item label {
     float: left;
     clear: both;
-    width: 79%;
+    width: 73%;
     text-align: right;
   }
   .totals .totals-item .totals-value {
@@ -174,6 +176,10 @@
       border-top: 1px solid #eee;
     }
   
+    .container-carrito{
+        max-width: 100%;
+        text-align: center;
+    }
     .column-labels {
       display: none;
     }
@@ -204,9 +210,7 @@
       margin-left: 20px;
     }
   
-    .product-quantity:before {
-      content: 'x';
-    }
+
   
     .product-removal {
       width: auto;
@@ -221,6 +225,7 @@
   @media screen and (max-width: 350px) {
     .product-removal {
       float: right;
+      width: 100%;
     }
   
     .product-line-price {
