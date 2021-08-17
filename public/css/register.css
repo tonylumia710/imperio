@@ -32,9 +32,9 @@
 .register .button--positionRegister {
    bottom  : 20px;
    width: 50%;
+   border-radius: 5px;
 
 }
-
 
 .register label {
     display: flex;
@@ -50,6 +50,8 @@
       margin-top: 0;
     }
 }
-
+.register h1{
+    margin-top: 10px;
+}
 
   
