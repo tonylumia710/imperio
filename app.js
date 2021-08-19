@@ -5,30 +5,14 @@ let path = require('path');
 
 app.use(express.static('public'));
 
-/* Ruta para Home*/
+/* ENRUTADORES */
+let indexRouter = require('./src/routes/index');
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'/src/views/index.html'));
-})
+/* Rutas */
+app.use('/', indexRouter);
 
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname,'/src/views/register.html'));
-})
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname,'/src/views/login.html')); 
-})
-
-app.get('/password', (req, res) => {
-    res.sendFile(path.join(__dirname,'/src/views/password.html')); 
-})
-
-app.get('/carrito', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/carrito.html'))
-})
-
-app.get('/productDetail', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/productDetail.html'))
-})
+/* VIEWS */
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './src/views'));
 
 app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}\nhttp://localhost:${port}`));
