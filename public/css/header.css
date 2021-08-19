@@ -80,6 +80,7 @@ header li {
     justify-content: space-between;
     padding: 5px 10px;
     margin: 0 10px;
+    background-color: white;
 }
 
 .search-bar input {
