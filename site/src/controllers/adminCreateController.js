@@ -1,5 +1,5 @@
 module.exports = {
-    admin: (req, res) => {
+    adminCreate: (req, res) => {
            return res.render('adminCreate')
     }
 }
