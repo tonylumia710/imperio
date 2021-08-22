@@ -12,6 +12,7 @@ let loginRouter = require('./routes/login');
 let passwordRouter = require('./routes/password');
 let productDetailRouter = require('./routes/productDetail');
 let registerRouter = require('./routes/register');
+let adminRouter = require('./routes/admin')
 
 /* Rutas */
 app.use('/', indexRouter);
@@ -20,6 +21,7 @@ app.use('/login', loginRouter);
 app.use('/password', passwordRouter);
 app.use('/productDetail', productDetailRouter);
 app.use('/register', registerRouter);
+app.use('/admin', adminRouter);
 
 
 
