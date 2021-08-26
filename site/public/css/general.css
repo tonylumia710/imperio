@@ -10,11 +10,16 @@
 @import url('productDetail.css');
 @import url('adminCreate.css');
 @import url('adminEdit.css');
+@import url('editProfile.css');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+
 }
 
 .validationError{

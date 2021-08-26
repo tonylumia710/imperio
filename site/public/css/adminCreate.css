@@ -3,7 +3,7 @@
 main.admin-main {
     background-image: url('/images/fondoadmin1.png');  
     height: 100%;
-    padding: 6rem 1rem;
+    padding: 3rem 1rem;
 }
 
 main.admin-main .container {
@@ -27,6 +27,7 @@ main.admin-main form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 main.admin-main .input-form {
@@ -82,7 +83,7 @@ main.admin-main button {
     border: 2px solid #222222;
     transition: all 0.3s ease-in-out;
 }
-
+.button-formt-edit {
 main.admin-main button:hover {
     background: none;
     border: 2px solid #D4AF37;
