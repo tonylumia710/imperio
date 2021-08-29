@@ -74,11 +74,8 @@ label {
 
 /*botones*/
 
-.buttom-container {
-    align-items: center;
-}
-
-.btn {
+.buttom-container, .btn-reset, .btn-edit {
+    align-items: center; 
     border: none;
     border-radius: 1rem;
     cursor: pointer;
