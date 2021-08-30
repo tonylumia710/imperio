@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include ('partials/head.ejs') %>
+    <%- include ('../partials/head.ejs') %>
 <body>
-    <%- include('partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
     <main class="admin-main">
         <div class="container">
             <h2>Crear producto</h2>
-            <form action="/admin" method="POST">
+            <form action="/admin/adminCreate.ejs" method="POST">
                 <div class="input-form">
                     <label for="productid">Id del producto: </label>
                     <input type="text" name="productId" id='productId'>

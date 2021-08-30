@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <%- include('partials/head.ejs') %> 
+  <%- include('../partials/head.ejs') %> 
 
 <body>
-  <%- include('partials/header.ejs') %>
+  <%- include('../partials/header.ejs') %>
   <!--body-->
   <div class="login">
-    <form action="/views/index.ejs" method="POST" class="card">
+    <form action="/index" method="POST" class="card">
       <div>
         <h1> Iniciar Sesion</h1>
       </div>
@@ -15,10 +15,10 @@
       <span class="validationError email--absolute">Ingresa un email valido</span>
       <input class="card__input input--style" type="password" name="contraseña" id="" placeholder="Contraseña" required>
       <span class="validationError contraseña--absolute">Contraseña</span>
-      <a href="user/password" class="card__enlace">
+      <a href="/users/password" class="card__enlace">
         <span class="card__text">¿Olvide mi contraseña?</span>
       </a>
-      <a href="http://localhost:3000/register"><input type="button" role="button" value="Registrarse"
+      <a href="/users/register"><input type="button" role="button" value="Registrarse"
           class="button button--positionRegister"></a>
       <input type="submit" role="button" value="Ingresar" class="button button--positionIngresar">
       <div class="check">
@@ -62,7 +62,7 @@
   <!-- Fin carrousel -->
   </main>
 
-  <%- include('partials/footer.ejs') %>
+  <%- include('../partials/footer.ejs') %>
 
 </body>
 

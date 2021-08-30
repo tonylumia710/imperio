@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-let port = 3000
+let port = 3000;
 let path = require('path');
 
 /* ENRUTADORES */
@@ -21,7 +21,7 @@ app.use(express.static('public'));
 app.use('/', indexRouter);
 app.use('/product', productRouter);
 app.use('/admin', adminRouter);
-app.use('/', usersRouter);
+app.use('/users', usersRouter);
 
 
 

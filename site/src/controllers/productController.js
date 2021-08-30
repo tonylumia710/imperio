@@ -1,8 +1,8 @@
 module.exports = {
     productDetail: (req, res) => {
-         res.render('productDetail')
+         res.render('product/productDetail')
     },
     carrito: (req, res) => {
-      res.render('carrito')
+      res.render('product/carrito')
     }
 }

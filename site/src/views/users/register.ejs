@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include ('partials/head.ejs') %>
+<%- include ('../partials/head.ejs') %>
 
 <body>
-  <%- include('partials/header.ejs') %>
+  <%- include('../partials/header.ejs') %>
 
   <main class="home">
     <div class="register">
-      <form action="/register.html" method="post" class="card">
+      <form action="/users/register" method="post" class="card">
         <h1>Crear Cuenta</h1>
         <div class="formulario">
           <label for="nombre">Nombre:</label>
@@ -37,7 +37,7 @@
         <a href="/login">
       </form>
     </div> 
-     <%- include('partials/footer.ejs') %>
+     <%- include('../partials/footer.ejs') %>
 
   </main>
 
