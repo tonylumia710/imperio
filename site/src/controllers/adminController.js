@@ -4,5 +4,8 @@ module.exports = {
     },
      adminEdit: (req, res) => {
         res.render("admin/adminEdit")
+    },
+    products: (req, res) => {
+        res.render('admin/adminProducts')
     }
 }
