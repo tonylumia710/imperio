@@ -17,6 +17,7 @@
       <span class="validationError contraseña--absolute">Contraseña</span>
       <a href="/users/password" class="card__enlace">
         <span class="card__text">¿Olvide mi contraseña?</span>
+        <a href="/admin"><span class="card__text">Administrador</span></a>
       </a>
       <a href="/users/register"><input type="button" role="button" value="Registrarse"
           class="button button--positionRegister"></a>
@@ -27,40 +28,6 @@
       </div>
     </form>
   </div>
-  <!--Carrousel-->
-  <section class="carousel-container">
-
-    <div class="slides fade">
-      <img src="/images/banners/banner5.jpg" alt="">
-    </div>
-
-    <div class="slides fade">
-      <img src="/images/banners/banner6.jpg" alt="">
-    </div>
-
-    <div class="slides fade">
-      <img src="/images/banners/banner7.jpg" alt="">
-    </div>
-
-    <div class="slides fade">
-      <img src="/images/banners/banner8.jpg" alt="">
-    </div>
-
-    <!--Flechas de desplazamiento -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!--Selectores de banner-->
-    <div class="dots">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-
-    </div>
-  </section>
-  <!-- Fin carrousel -->
-  </main>
 
   <%- include('../partials/footer.ejs') %>
 

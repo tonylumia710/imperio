@@ -7,5 +7,8 @@ module.exports = {
     },
     products: (req, res) => {
         res.render('admin/adminProducts')
+    },
+    index: (req, res) => {
+        res.render('admin/adminIndex')
     }
 }

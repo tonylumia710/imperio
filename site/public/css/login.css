@@ -23,7 +23,7 @@ h1 {
         150deg
         ,#0e0d0d, #d4af37, rgb(59, 47, 49));
     animation: BgGradient 5s ease infinite;
-       margin-top: 20px;
+    margin: 50px 0;
 }
 
 .login .card__input {

@@ -1,7 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let {adminCreate,
-    adminEdit, products} = require('../controllers/adminController.js')
+    adminEdit, products, index} = require('../controllers/adminController.js')
 
 
 /* Create Product*/
@@ -10,6 +10,8 @@ router.get('/adminCreate', adminCreate)
 router.get('/adminEdit', adminEdit)
 
 router.get('/products', products)
+
+router.get('/', index)
 
 
 module.exports = router;

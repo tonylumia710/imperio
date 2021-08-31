@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include ('../partials/head.ejs') %>
+    <%- include ('../admin/adminHead.ejs') %>
 <body>
     <%- include ('../admin/adminHeader.ejs') %>
     <main class="admin-main-product">
         <div class="head-bar">
             <h4>Productos</h4>
-            <a href="#"><div class="add-button">Agregar</div></a>
+            <a href="/admin/adminCreate"><div class="add-button">Agregar</div></a>
         </div>
         
         <table class="table table-dark table-striped">
@@ -26,7 +26,7 @@
                     <td>Mesa</td>
                     <td>Comedor</td>
                     <td>$5000</td>
-                    <td><a href="#"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
+                    <td><a href="/admin/adminEdit"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
                     <td><a href="#"><div class="delete-button"><i class="fas fa-trash"></i></div></a></td>
                 </tr>
                 <tr>
@@ -34,7 +34,7 @@
                     <td>Escritorio</td>
                     <td>Dormitorio</td>
                     <td>$7050</td>
-                    <td><a href="#"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
+                    <td><a href="/admin/adminEdit"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
                     <td><a href="#"><div class="delete-button"><i class="fas fa-trash"></i></div></a></td>
                 </tr>
                 <tr>
@@ -42,7 +42,7 @@
                     <td>Alacena</td>
                     <td>Cocina</td>
                     <td>$4870</td>
-                    <td><a href="#"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
+                    <td><a href="/admin/adminEdit"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
                     <td><a href="#"><div class="delete-button"><i class="fas fa-trash"></i></div></a></td>
                 </tr>
             </tbody>
