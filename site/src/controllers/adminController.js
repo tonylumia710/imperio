@@ -1,8 +1,8 @@
 module.exports = {
-    adminCreate: (req, res) => {
+    create: (req, res) => {
         res.render("admin/adminCreate")
     },
-     adminEdit: (req, res) => {
+    edit: (req, res) => {
         res.render("admin/adminEdit")
     },
     products: (req, res) => {

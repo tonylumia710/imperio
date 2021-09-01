@@ -1,17 +1,19 @@
 let express = require('express');
 let router = express.Router();
-let {adminCreate,
-    adminEdit, products, index} = require('../controllers/adminController.js')
+let {create,
+    edit, products, index} = require('../controllers/adminController.js')
 
+
+/* Índice */
+router.get('/', index);
 
 /* Create Product*/
-router.get('/adminCreate', adminCreate)
+router.get('/create', create);
+
 /* Edit Product*/
-router.get('/adminEdit', adminEdit)
+router.get('/edit', edit);
 
-router.get('/products', products)
-
-router.get('/', index)
-
+/* Listado de productos */
+router.get('/products', products);
 
 module.exports = router;
