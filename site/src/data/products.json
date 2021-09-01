@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "productName": "Asia nordica extensible",
+    "description": "La mesa Asia es fácil de limpiar, y resistente a los liquidos y a la manchas, de diseño sencillo, es fácil de combinar en cualquier ambiente. Tapa en MDF laqueado poliuretano;  Colores a elección Blanco / Negro / Chocolate",
+    "category": "Comedor",
+    "measures": "220x180x95",
+    "price": 17163.15,
+    "origin": "Argentina",
+    "availability": "En stock",
+    "image": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "productName": "Asia all wood",
+    "description": "La mesa Asia es fácil de limpiar, y resistente a los liquidos y a la manchas, de diseño sencillo, es fácil de combinar en cualquier ambiente. Tapa enchapada en Paraíso. Lustre poliuretano natural. Base del mueble enchapada en Paraíso. Lustre poliuretano natural. Sistema desmontable, separando tapa de las patas",
+    "category": "Comedor",
+    "measures": "220x180x95",
+    "price": 6355.6,
+    "origin": "Argentina",
+    "availability": "En stock",
+    "image": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "productName": "Combo asia nordica",
+    "description": "Tapa en MDF laqueado poliuretano;  Colores a elección Blanco / Negro / Chocolate",
+    "category": "Comedor",
+    "measures": "220x180x95",
+    "price": 11272.39,
+    "origin": "Argentina",
+    "availability": "En stock",
+    "image": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "productName": "Combo Asia all wood + Londres pana",
+    "description": "Estructura Paraiso macizo, lustre natural. Tapizado pana antimancha",
+    "category": "Comedor",
+    "measures": "220x180x95",
+    "price": 16331.12,
+    "origin": "Argentina",
+    "availability": "En stock",
+    "image": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "productName": "Asia Minimalista",
+    "description": "Tapa en MDF laqueado poliuretano;  Colores a elección Blanco / Negro / Chocolate",
+    "category": "Comedor",
+    "measures": "220x180x95",
+    "price": 10290.23,
+    "origin": "Argentina",
+    "availability": "En stock",
+    "image": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "productName": "Oslo nordico extensible",
+    "description": " Asiento acolchonado en ecocuero blanco o negro",
+    "category": "Comedor",
+    "measures": "220x180x95",
+    "price": 23903.33,
+    "origin": "Argentina",
+    "availability": "En stock",
+    "image": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "productName": "Oslo nordico",
+    "description": "Base del mueble en enchapada en Paraíso. Lustre poliuretano natural",
+    "category": "Comedor",
+    "measures": "220x180x95",
+    "price": 6982.66,
+    "origin": "Argentina",
+    "availability": "En stock",
+    "image": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "productName": "Asia Tokio",
+    "description": "La mesa Asia es fácil de limpiar, y resistente a los liquidos y a la manchas, de diseño sencillo, es fácil de combinar en cualquier ambiente.",
+    "category": "Comedor",
+    "measures": "220x180x95",
+    "price": 21113.16,
+    "origin": "Argentina",
+    "availability": "En stock",
+    "image": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "productName": "Cama New York",
+    "description": "La Cama Nueva York es la cama ideal para tu dormitorio, su diseño minimalista, le aporta elegancia y te ayuda a reducir el desorden, dejando tu cuarto mucho mas ordenado. Así podrás relajarte y disfrutar de tu espacio.",
+    "category": "Dormitorio",
+    "measures": "220x180x95",
+    "price": 5368.92,
+    "origin": "Argentina",
+    "availability": "En stock",
+    "image": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
+  }
+]
