@@ -26,3 +26,7 @@ header.admin-header .nav-admin a {
     text-decoration: none;
     color:white;
 }
+
+header.admin-header .admin-li {
+    margin: 0 25px;
+}

@@ -24,6 +24,4 @@ app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
 
 
-
-
 app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}\nhttp://localhost:${port}`));

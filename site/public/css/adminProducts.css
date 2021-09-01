@@ -27,8 +27,10 @@ main.admin-main-product .head-bar {
 main.admin-main-product .add-button {
     background-color: rgb(50, 161, 50);
     border-radius: 5px;
-    height: 28px;
+    height: 35px;
     width: 80px;
+    padding: 5px;
+    margin-bottom: 8px;
 }
 
 main.admin-main-product a {
