@@ -40,19 +40,18 @@
         </div>
 
         <div class="product-content">
-          <h2 class="product-title">Sofa Birkshire</h2>
+          <h2 class="product-title"><%= producto.productName %></h2>
           <div class="product-price1">
-            <p class="price">Precio: <span>$2.150</span></p>
+            <p class="price">Precio: <span><%= producto.price %></span></p>
           </div>
 
           <div class="product-detail">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis veniam nemo ut ipsa, autem ullam consectetur, delectus quisquam at sint expedita molestiae quas aliquid.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus neque voluptatem quam. Nulla, vitae sunt.</p>
+            <p><%= producto.description %></p>
             <ul>
-              <li>Disponibilidad: <span>En stock</span></li>
-              <li>Categoría: <span>Sofá</span></li>
-              <li>Medidas: <span></span></li>
-              <li>Origen: <span></span></li>
+              <li>Disponibilidad: <span><%= producto.availability %></span></li>
+              <li>Categoría: <span><%= producto.category %></span></li>
+              <li>Medidas: <span><%= producto.measures %></span></li>
+              <li>Origen: <span><%= producto.origin %></span></li>
             </ul>
           </div>
 

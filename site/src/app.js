@@ -2,6 +2,7 @@ let express = require('express');
 let app = express();
 let port = 3000;
 let path = require('path');
+let methodOverride = require('method-override')
 
 /* ENRUTADORES */
 let indexRouter = require('./routes/index');
@@ -13,15 +14,16 @@ let usersRouter = require('./routes/users');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 
-/* Middlewares */
+/* MIDDLEWARES */
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
-
-/* Rutas */
+/* RUTAS */
 app.use('/', indexRouter);
 app.use('/product', productRouter);
 app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
-
 
 app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}\nhttp://localhost:${port}`));

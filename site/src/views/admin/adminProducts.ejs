@@ -5,7 +5,7 @@
     <%- include ('../admin/adminHeader.ejs') %>
     <main class="admin-main-product">
         <div class="head-bar">
-            <h4>Productos</h4>
+            <h4>Lista de productos</h4>
             <a href="/admin/create"><div class="add-button">Agregar</div></a>
         </div>
         
@@ -21,30 +21,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mesa</td>
-                    <td>Comedor</td>
-                    <td>$5000</td>
-                    <td><a href="/admin/edit"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
-                    <td><a href="#"><div class="delete-button"><i class="fas fa-trash"></i></div></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Escritorio</td>
-                    <td>Dormitorio</td>
-                    <td>$7050</td>
-                    <td><a href="/admin/edit"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
-                    <td><a href="#"><div class="delete-button"><i class="fas fa-trash"></i></div></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Alacena</td>
-                    <td>Cocina</td>
-                    <td>$4870</td>
-                    <td><a href="/admin/edit"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
-                    <td><a href="#"><div class="delete-button"><i class="fas fa-trash"></i></div></a></td>
-                </tr>
+                <% productos.forEach(producto => { %>
+                    <tr>
+                        <th scope="row"><%= producto.id %></th>
+                        <td><%= producto.productName %></td>
+                        <td><%= producto.category %></td>
+                        <td><%= producto.price %></td>
+                        <td><a href="/admin/edit/<%= producto.id %>"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
+                        <td><a href="/admin/delete/<%= producto.id %>"><div class="delete-button"><i class="fas fa-trash"></i></div></a></td>
+                    </tr>
+                <% }) %> 
             </tbody>
         </table>
     </main>

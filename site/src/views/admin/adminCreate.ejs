@@ -6,18 +6,14 @@
     <main class="admin-main">
         <div class="container">
             <h2>Crear producto</h2>
-            <form action="/admin/products" method="POST">
-                <div class="input-form">
-                    <label for="productid">Id del producto: </label>
-                    <input type="text" name="productId" id='productId'>
-                </div>
+            <form action="/admin/create" method="POST">
                 <div class="input-form">
                     <label for="productName">Nombre del producto: </label>
                     <input type="text" name="productName" id='productName'>
                 </div>
                 <div class="input-form">
                     <label for="price">Precio: </label>
-                    <input type="text" name="productprice" id='productPrice'>
+                    <input type="text" name="price" id='price'>
                 </div>
                 <div class="input-form">
                     <label for="description">Descripción: </label>
@@ -26,16 +22,16 @@
                 <div class="input-form">
                     <label>Categoría: </label>
                     <select name="category" id="">
-                        <option value="#1">Cocina</option>
-                        <option value="#2">Comedor</option>
-                        <option value="#3">Dormitorio</option>
-                        <option value="#1">Living</option>
-                        <option value="#1">Oficina</option>
+                        <option value="Cocina">Cocina</option>
+                        <option value="Comedor">Comedor</option>
+                        <option value="Dormitorio">Dormitorio</option>
+                        <option value="Living">Living</option>
+                        <option value="Oficina">Oficina</option>
                     </select>
                 </div>
                 <div class="input-form">
-                    <label for="measurement">Medidas: </label>
-                    <input type="text" name="measurement" id='measurement'>
+                    <label for="measures">Medidas: </label>
+                    <input type="text" name="measures" id='measures'>
                 </div>
                 <div class="input-form">
                     <label for="origin">Origen: </label>

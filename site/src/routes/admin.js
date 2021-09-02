@@ -1,19 +1,20 @@
 let express = require('express');
 let router = express.Router();
-let {create,
-    edit, products, index} = require('../controllers/adminController.js')
+let {viewCreate, create, viewEdit, edit, products, index, deleteProduct} = require('../controllers/adminController.js')
 
+/* GET */
+router.get('/', index); /* Índice */
+router.get('/create', viewCreate); /* Vista de creación de producto*/
+router.get('/edit/:id', viewEdit); /* Vista de edición de producto*/
+router.get('/products', products); /* Listado de productos */
 
-/* Índice */
-router.get('/', index);
+/* POST */
+router.post('/create', create); /* Creación de producto */
 
-/* Create Product*/
-router.get('/create', create);
+/* PUT */
+router.put('/edit/:id', edit); /* Recibe datos para la edición de productos */
 
-/* Edit Product*/
-router.get('/edit', edit);
-
-/* Listado de productos */
-router.get('/products', products);
+/* DELETE */
+router.delete('/delete/:id', deleteProduct); /* Borra un producto */
 
 module.exports = router;

@@ -4,17 +4,17 @@ main.admin-main-product {
 
 main.admin-main-product table tbody .edit-button,
 main.admin-main-product table tbody .delete-button {
-    width: 25%;
+    width: 30%;
     border-radius: 5px;
     text-align: center;
 }
 
-main.admin-main-product table tbody .edit-button {
+main.admin-main-product table tbody tr td a div.edit-button {
     background-color: lightseagreen;
     color: white;
 }
 
-main.admin-main-product table tbody .delete-button {
+main.admin-main-product table tbody tr td a div.delete-button {
     background-color: red;
     color: white;
 }
@@ -43,10 +43,10 @@ main.admin-main-product .add-button:hover {
     background-color: rgb(66, 184, 66);
 }
 
-main.admin-main-product table tbody .edit-button:hover {
+main.admin-main-product table tbody tr td a div.edit-button:hover {
     background-color: rgb(102, 187, 183);
 }
 
-main.admin-main-product table tbody .delete-button:hover {
+main.admin-main-product table tbody tr td a div.delete-button:hover {
     background-color: rgb(250, 48, 48);
 }
