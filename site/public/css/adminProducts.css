@@ -14,7 +14,7 @@ main.admin-main-product table tbody tr td a div.edit-button {
     color: white;
 }
 
-main.admin-main-product table tbody tr td a div.delete-button {
+main.admin-main-product table tbody tr td button.delete-button {
     background-color: red;
     color: white;
 }
@@ -47,6 +47,6 @@ main.admin-main-product table tbody tr td a div.edit-button:hover {
     background-color: rgb(102, 187, 183);
 }
 
-main.admin-main-product table tbody tr td a div.delete-button:hover {
+main.admin-main-product table tbody tr td button.delete-button:hover {
     background-color: rgb(250, 48, 48);
 }

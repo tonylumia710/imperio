@@ -28,7 +28,11 @@
                         <td><%= producto.category %></td>
                         <td><%= producto.price %></td>
                         <td><a href="/admin/edit/<%= producto.id %>"><div class="edit-button"><i class="fas fa-pen"></i></div></a></td>
-                        <td><a href="/admin/delete/<%= producto.id %>"><div class="delete-button"><i class="fas fa-trash"></i></div></a></td>
+                        <td>
+                            <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="delete-button"><i class="fas fa-trash"></i></button>
+                            </form>
+                        </td>
                     </tr>
                 <% }) %> 
             </tbody>

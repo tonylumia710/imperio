@@ -37,7 +37,7 @@ module.exports = {
 
         writeJson(getProducts);
 
-        res.redirect('/admin/products')
+        res.redirect('/admin/products');
     },
     viewEdit: (req, res) => {
         let producto = getProducts.find(producto => {
@@ -64,9 +64,18 @@ module.exports = {
 
         writeJson(getProducts);
 
-        res.redirect('admin/products');
+        res.redirect('/admin/products');
     },
     deleteProduct: (req, res) => {
-        
+        getProducts.forEach(producto => {
+            if(producto.id === +req.params.id) {
+                let productoAEliminar = getProducts.indexOf(producto);
+                getProducts.splice(productoAEliminar, 1);
+            }
+        })
+
+        writeJson(getProducts);
+
+        res.redirect('/admin/products');
     }
 }
