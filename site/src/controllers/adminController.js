@@ -21,8 +21,15 @@ module.exports = {
             }
         });
 
+        let arrayImages = [];
+        if(req.files) {
+            req.files.forEach(image => {
+                arrayImages.push(image.filename);
+            })
+        }
+
         let nuevoProducto = {
-            id: lastId +1,
+            id: lastId + 1,
             productName: req.body.productName,
             description: req.body.description,
             category: req.body.category,
@@ -30,7 +37,7 @@ module.exports = {
             price: req.body.price,
             origin: req.body.origin,
             availability: req.body.availability,
-            image: 'random.jpg'
+            image: arrayImages.length > 0 ? arrayImages : 'default-image.jpg'
         }
 
         getProducts.push(nuevoProducto);
@@ -49,6 +56,13 @@ module.exports = {
         });
     },
     edit: (req, res) => {
+        let arrayImages = [];
+        if(req.files) {
+            req.files.forEach(image => {
+                arrayImages.push(image.filename);
+            })
+        }
+
         getProducts.forEach(producto => {
             if(producto.id === +req.params.id) {
                 producto.id = producto.id,
@@ -58,7 +72,8 @@ module.exports = {
                 producto.measures = req.body.measures,
                 producto.price = req.body.price,
                 producto.origin = req.body.origin,
-                producto.availability = req.body.availability
+                producto.availability = req.body.availability,
+                producto.image = arrayImages.length > 0 ? arrayImages : producto.image
             }
         })
 
