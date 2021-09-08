@@ -7,7 +7,7 @@
         
         <div class="container">
             <h2>Editar Producto</h2>
-            <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST">
+            <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="input-form">
                     <label for="productName">Nombre del producto: </label>
                     <input type="text" name="productName" id='productName' value="<%= producto.productName %>">
@@ -40,7 +40,7 @@
                 </div>
                 <div class="input-form">
                     <label>Imagenes del producto</label>
-                    <input type="file" name="image" accept=".jpg, .jpeg, .png" multiple>
+                    <input type="file" name="imgProduct" accept=".jpg, .jpeg, .png" multiple>
                 </div>
                 <div class="buttons-edit">
                     <div class="button-form-edit">

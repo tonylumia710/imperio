@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 let port = 3000;
 let path = require('path');
-let methodOverride = require('method-override')
+let methodOverride = require('method-override');
 
 /* ENRUTADORES */
 let indexRouter = require('./routes/index');
