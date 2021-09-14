@@ -89,6 +89,10 @@ main .admin-main button:hover{
     border: 2px solid #D4AF37;
 }
 
+main.admin-main small {
+    color: red;
+}
+
 /* Media Quieries */
 /* Tablet */
 

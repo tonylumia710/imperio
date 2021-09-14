@@ -1,4 +1,5 @@
 let { getProducts, writeJson } = require('../data/dataBase');
+let { validationResult } = require('express-validator');
 
 module.exports = {
     index: (req, res) => {
@@ -13,38 +14,49 @@ module.exports = {
         res.render('admin/adminCreate')
     },
     create: (req, res) => {
-        let lastId = 1;
+        let errors = validationResult(req);
 
-        getProducts.forEach(producto => {
-            if(producto.id > lastId) {
-                lastId = producto.id
+        if (errors.isEmpty()) {
+            let lastId = 1;
+
+            getProducts.forEach(producto => {
+                if (producto.id > lastId) {
+                    lastId = producto.id
+                }
+            });
+
+            let arrayImages = [];
+            if (req.files) {
+                req.files.forEach(image => {
+                    arrayImages.push(image.filename);
+                })
             }
-        });
 
-        let arrayImages = [];
-        if(req.files) {
-            req.files.forEach(image => {
-                arrayImages.push(image.filename);
+            let nuevoProducto = {
+                id: lastId + 1,
+                productName: req.body.productName,
+                description: req.body.description,
+                category: req.body.category,
+                measures: req.body.measures,
+                price: req.body.price,
+                origin: req.body.origin,
+                availability: req.body.availability,
+                image: arrayImages.length > 0 ? arrayImages : 'default-image.jpg'
+            }
+
+            getProducts.push(nuevoProducto);
+
+            writeJson(getProducts);
+
+            res.redirect('/admin/products');
+        } else {
+            res.render('admin/adminCreate', {
+                errors: errors.mapped(),
+                old: req.body
             })
         }
 
-        let nuevoProducto = {
-            id: lastId + 1,
-            productName: req.body.productName,
-            description: req.body.description,
-            category: req.body.category,
-            measures: req.body.measures,
-            price: req.body.price,
-            origin: req.body.origin,
-            availability: req.body.availability,
-            image: arrayImages.length > 0 ? arrayImages : 'default-image.jpg'
-        }
 
-        getProducts.push(nuevoProducto);
-
-        writeJson(getProducts);
-
-        res.redirect('/admin/products');
     },
     viewEdit: (req, res) => {
         let producto = getProducts.find(producto => {
@@ -57,23 +69,23 @@ module.exports = {
     },
     edit: (req, res) => {
         let arrayImages = [];
-        if(req.files) {
+        if (req.files) {
             req.files.forEach(image => {
                 arrayImages.push(image.filename);
             })
         }
 
         getProducts.forEach(producto => {
-            if(producto.id === +req.params.id) {
+            if (producto.id === +req.params.id) {
                 producto.id = producto.id,
-                producto.productName = req.body.productName,
-                producto.description = req.body.description,
-                producto.category = req.body.category,
-                producto.measures = req.body.measures,
-                producto.price = req.body.price,
-                producto.origin = req.body.origin,
-                producto.availability = req.body.availability,
-                producto.image = arrayImages.length > 0 ? arrayImages : producto.image
+                    producto.productName = req.body.productName,
+                    producto.description = req.body.description,
+                    producto.category = req.body.category,
+                    producto.measures = req.body.measures,
+                    producto.price = req.body.price,
+                    producto.origin = req.body.origin,
+                    producto.availability = req.body.availability,
+                    producto.image = arrayImages.length > 0 ? arrayImages : producto.image
             }
         })
 
@@ -83,7 +95,7 @@ module.exports = {
     },
     deleteProduct: (req, res) => {
         getProducts.forEach(producto => {
-            if(producto.id === +req.params.id) {
+            if (producto.id === +req.params.id) {
                 let productoAEliminar = getProducts.indexOf(producto);
                 getProducts.splice(productoAEliminar, 1);
             }
