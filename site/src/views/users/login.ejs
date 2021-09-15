@@ -7,13 +7,19 @@
     <%- include('../partials/header.ejs') %>
       <!--body-->
       <div class="login">
-        <form action="/index" method="POST" class="card">
+        <form action="/users/login" method="POST" class="card">
           <div>
             <h1> Iniciar Sesion</h1>
           </div>
-          <input class="card__input input--style" type="text" name="email" placeholder="E-mail" required> 
+          <input class="card__input input--style" type="text" name="email" placeholder="E-mail" required>
+          <% if(locals.errors && errors.email) { %>
+            <small class="error"><%= errors.email.msg %></small>
+          <% } %>
           <input class="card__input input--style" type="password" name="contraseña" id="" placeholder="Contraseña"
             required>
+          <% if(locals.errors && errors.contraseña) { %>
+              <small class="error"><%= errors.contraseña.msg %></small>
+          <% } %>
           <div class="check">
             <input class="RecordarChecbox" type="checkbox" name="Recordar">
             <label class="Recordar" for="Recordar">Recordarme</label>

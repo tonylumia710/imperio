@@ -112,3 +112,7 @@ margin: auto;}
 .login.ckeck {
   left: 20px;
 }
+
+.login small {
+    color: red;
+}

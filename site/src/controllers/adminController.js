@@ -1,4 +1,4 @@
-let { getProducts, writeJson } = require('../data/dataBase');
+let { getProducts, writeProductsJson } = require('../data/dataBase');
 let { validationResult } = require('express-validator');
 
 module.exports = {
@@ -46,7 +46,7 @@ module.exports = {
 
             getProducts.push(nuevoProducto);
 
-            writeJson(getProducts);
+            writeProductsJson(getProducts);
 
             res.redirect('/admin/products');
         } else {
@@ -90,7 +90,7 @@ module.exports = {
                 }
             })
 
-            writeJson(getProducts);
+            writeProductsJson(getProducts);
 
             res.redirect('/admin/products');
         } else {
@@ -114,7 +114,7 @@ module.exports = {
             }
         })
 
-        writeJson(getProducts);
+        writeProductsJson(getProducts);
 
         res.redirect('/admin/products');
     }

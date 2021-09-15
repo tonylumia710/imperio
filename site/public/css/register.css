@@ -80,4 +80,7 @@
 .register .formulario .login-link {
     margin-bottom: 30px;
 }
-  
+
+.register .formulario small {
+    color: red;
+}

@@ -1,17 +1,17 @@
 let express = require('express');
 let router = express.Router();
-let { register, login, editProfile, password } = require('../controllers/usersController.js');
+let { register, login, profile, password, processRegister, processLogin } = require('../controllers/usersController.js');
+let loginValidator = require('../validations/loginValidator');
+let registerValidator = require('../validations/registerValidator');
 
-/* GET - Register form */
-router.get('/register', register);
+/* GET */
+router.get('/register', register); /* Vista del formulario de registro */
+router.get('/login', login); /* Vista del formulario de login */
+router.get('/profile', profile); /* Vista del perfil de usuario */
+router.get('/password', password); /* Vista del formulario de recuperación de contraseña */
 
-/* GET - Login form */
-router.get('/login', login);
+/* POST */
+router.post('/register', registerValidator, processRegister);
+router.post('/login', loginValidator, processLogin);
 
-/* GET - User profile */
-router.get('/editProfile', editProfile);
-   
-/* GET - User password */
-router.get('/password', password);
-
-module.exports = router
+module.exports = router;
