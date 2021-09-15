@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <%- include('../partials/head.ejs') %> 
+<%- include('../partials/head.ejs') %>
 
-<body>
-  <%- include('../partials/header.ejs') %>
-  <!--body-->
-  <div class="login">
-    <form action="/index" method="POST" class="card">
-      <div>
-        <h1> Iniciar Sesion</h1>
+  <body>
+    <%- include('../partials/header.ejs') %>
+      <!--body-->
+      <div class="login">
+        <form action="/index" method="POST" class="card">
+          <div>
+            <h1> Iniciar Sesion</h1>
+          </div>
+          <input class="card__input input--style" type="text" name="email" placeholder="E-mail" required> 
+          <input class="card__input input--style" type="password" name="contraseña" id="" placeholder="Contraseña"
+            required>
+          <div class="check">
+            <input class="RecordarChecbox" type="checkbox" name="Recordar">
+            <label class="Recordar" for="Recordar">Recordarme</label>
+          </div>
+          <input type="submit" role="button" value="Ingresar" class="button button--positionIngresar">
+          
+          <a class="register-link" href="/users/register">¿No tienes una cuenta?</a>
+        </form>
       </div>
-      <input class="card__input input--style" type="text" name="email" placeholder="E-mail" required>
-      <span class="validationError email--absolute">Ingresa un email valido</span>
-      <input class="card__input input--style" type="password" name="contraseña" id="" placeholder="Contraseña" required>
-      <span class="validationError contraseña--absolute">Contraseña</span>
-      <a href="/users/password" class="card__enlace">
-        <span class="card__text">¿Olvide mi contraseña?</span>
-        <a href="/admin"><span class="card__text">Administrador</span></a>
-      </a>
-      <a href="/users/register"><input type="button" role="button" value="Registrarse"
-          class="button button--positionRegister"></a>
-      <input type="submit" role="button" value="Ingresar" class="button button--positionIngresar">
-      <div class="check">
-        <input class="RecordarChecbox" type="checkbox" name="Recordar">
-        <label class="Recordar" for="Recordar"> Recordarme </label>
-      </div>
-    </form>
-  </div>
 
-  <%- include('../partials/footer.ejs') %>
+      <%- include('../partials/footer.ejs') %>
 
-</body>
+  </body>
 
 </html>

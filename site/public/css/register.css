@@ -1,4 +1,3 @@
-
 .register {
     background-color: rgba(255, 255, 255, 0.5);
     display         : flex;
@@ -6,10 +5,11 @@
     align-items     : center;
 
 }
+
 .register .card {
     position        : relative;
     width           : 420px;
-    height          : 487px;
+    height          : fit-content;
     box-shadow: 0 0 10px var(--bordes);
     display         : flex;
     flex-direction  : column;
@@ -20,20 +20,23 @@
         150deg
         ,#0e0d0d, #d4af37, rgb(59, 47, 49));
     animation: BgGradient 5s ease infinite;
-       margin: 20px;
+    margin: 50px;
+    border: 1px solid #222222
 }
 
 .register .button:hover {
-    border          : 1px solid var(--shadows);
-    transform       : scale(1.02);
-    background-color: var(--fondo-claro);
+    border: 2px solid #d4af37;
+    background: black;
 }
 
 .register .button--positionRegister {
-   bottom  : 20px;
-   width: 50%;
+   bottom: 20px;
+   width: 100%;
    border-radius: 5px;
-
+   transition: all 0.3s ease-in-out;
+   outline: none;
+   border: 2px solid #222222;
+   margin-bottom: 15px;
 }
 
 .register label {
@@ -43,12 +46,23 @@
     font-size: 15px;
     color: black;
 }
+
 .register .check {
     font-size: 10px;
 }
-.formulario input {
-    width: 209px;
-    height: 25px;
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario .input-form {
+    width: 260px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #222222;
+    padding-left: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -58,7 +72,12 @@
     }
 }
 .register h1{
-    margin-top: 10px;
+    margin-top: 40px;
+    font-weight: 500;
+    margin-bottom: 25px;
 }
 
+.register .formulario .login-link {
+    margin-bottom: 30px;
+}
   
