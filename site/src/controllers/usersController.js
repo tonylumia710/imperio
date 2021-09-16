@@ -5,18 +5,23 @@ let bcrypt = require('bcryptjs')
 module.exports = {
     /* Login form */
     login: (req, res) => {
-        res.render('users/login')
+        res.render('users/login', {
+            session: req.session
+        })
     },
     /* Register form */
     register: (req, res) => {
-        res.render('users/register')  
+        res.render('users/register', {
+            session: req.session
+        })  
     },
     /* User profile */
     profile: (req, res) =>{
         let user = getUsers.find(user => user.id === req.session.user.id);
 
         res.render('users/userProfile', {
-            user
+            user,
+            session: req.session
         })
     },
     editProfile: (req, res) => {
@@ -60,7 +65,7 @@ module.exports = {
             res.render('users/editProfile', {
                 errors: errors.mapped(),
                 old: req.body,
-                bodysession: req.session
+                session: req.session
             })
         }
     },
@@ -111,7 +116,8 @@ module.exports = {
         } else {
             res.render('users/register', {
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                session: req.session
             })
         }
     },
@@ -136,8 +142,14 @@ module.exports = {
 
         } else {
             res.render('users/login', {
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                session: req.session
             })
         }
+    },
+    logout: (req, res) => {
+        req.session.destroy()
+
+        res.redirect('/')
     }
 }

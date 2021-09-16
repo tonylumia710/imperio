@@ -79,7 +79,20 @@
     </form>
 
     <div class="user-icons-desktop">
-      <a href="/users/login"><i class="fas fa-user"></i></a>
+      <div class="dropdown">
+        <% if(typeof session.user != 'undefined') { %>
+          <i class="fas fa-user"><button onclick="myFunction()" class="dropbtn"></button></i>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="/users/profile">Mi perfil</a>
+            <a href="/users/logout">Cerrar sesión</a>
+            <% if(session.user.rol === 'ROL_ADMIN') { %>
+              <a href="/admin">Admin</a>
+            <% } %>
+          </div>
+        <% } else { %>
+          <a href="/users/login"><i class="fas fa-user"></i></a>
+        <% } %>  
+      </div>
       <a href="/product/carrito"><i class="fas fa-shopping-cart"></i></a>
     </div>
 

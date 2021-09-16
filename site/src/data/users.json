@@ -1,3 +1,16 @@
 [
-   
+    {
+        "id": 1,
+        "name": "Santiago",
+        "lastname": "Juarez",
+        "email": "santiagogjuarez@gmail.com",
+        "contraseña": "$2a$12$jU9S81UeFdUmw7gS2ERLsOEWhMGhnMQpfET6ZTsHQMx4t3CmBbqQi",
+        "avatar": "default-image.png",
+        "rol": "ROL_USER",
+        "tel": "46328696",
+        "address": "Gavilan 944",
+        "dni": "38242823",
+        "city": "",
+        "province": ""
+    }
 ]

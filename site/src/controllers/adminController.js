@@ -3,15 +3,20 @@ let { validationResult } = require('express-validator');
 
 module.exports = {
     index: (req, res) => {
-        res.render('admin/adminIndex')
+        res.render('admin/adminIndex', {
+            session: req.session
+        })
     },
     products: (req, res) => {
         res.render('admin/adminProducts', {
-            productos: getProducts
+            productos: getProducts,
+            session: req.session
         })
     },
     viewCreate: (req, res) => {
-        res.render('admin/adminCreate')
+        res.render('admin/adminCreate', {
+            session: req.session
+        })
     },
     create: (req, res) => {
         let errors = validationResult(req);
@@ -52,7 +57,8 @@ module.exports = {
         } else {
             res.render('admin/adminCreate', {
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                session: req.session
             })
         }
     },
@@ -62,7 +68,8 @@ module.exports = {
         })
 
         res.render('admin/adminEdit', {
-            producto
+            producto,
+            session: req.session
         });
     },
     edit: (req, res) => {
@@ -100,7 +107,8 @@ module.exports = {
             res.render('admin/adminEdit', {
                 producto,
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                session: req.session
             })
         }
 
