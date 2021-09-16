@@ -8,14 +8,10 @@
     <div class="form-container">
         <h2 class="perfile">Mis datos</h2>
         <hr>
-            <form action="/users/profile/edit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="profile-box">
                     <h3 class="profile-subtitle">Avatar</h3>
                     <div class="avatar">
-                      
-                    </div>
-                    <div class="input-file-container">
-                        <input type="file" name="avatar" id="">
+                        <img src="/images/usersAvatar/<%= user.avatar %>" alt="">
                     </div>
                 </div>
                 <div class="profile-form">
@@ -31,25 +27,19 @@
                             <div class="input-container">
                                 <div class="input-flex">
                                     <label for="">Nombre: </label>
-                                    <input class="input-style" type="text" name="name" placeholder="Nombre" value="<%= locals.old ? old.name : user.name %>">
+                                    <p><%= user.name %></p>
                                 </div>
-                                <% if (locals.errors && errors.name) { %>
-                                    <small class="text-danger"><%= errors.name.msg %> </small>
-                                <% } %>
                             </div>
                             <div class="input-container">
                                 <div class="input-flex">
                                     <label for="">Apellido: </label>
-                                    <input class="input-style" type="text" name="lastname" placeholder="Apellido" value="<%= locals.old ? old.lastname : user.lastname %>">
+                                    <p><%= user.lastname %></p>
                                 </div>
-                                <% if (locals.errors && errors.lastname) { %>
-                                    <small class="text-danger"><%= errors.lastname.msg %> </small>
-                                <% } %>
                             </div>
                             <div class="input-container">
                                 <div class="input-flex">
                                     <label for="">DNI: </label>
-                                    <input class="input-style" type="number" name="dni" placeholder="DNI" value="<%= user.dni ? user.dni : "" %>">
+                                    <p><%= user.dni %></p>
                                 </div>
                             </div>
                     </div>
@@ -58,7 +48,7 @@
                         <div class="input-container">
                             <div class="input-flex">
                                 <label for="">Teléfono: </label>
-                                <input class="input-style" type="tel" name="tel" placeholder="Teléfono" value="<%= user.tel ? user.tel : "" %>">
+                                <p><%= user.tel %></p>
                             </div>
                         </div>
                         <div class="input-container">
@@ -90,16 +80,14 @@
                         <div class="input-container">
                             <div class="input-flex">
                                 <label for="">Dirección: </label>
-                                <input class="input-style" type="text" name="address" placeholder="Direccion" value="<%= user.address ? user.address : "" %>">
+                                <p><%= user.address %></p>
                             </div>
                         </div>
                     </div>
                 </div> 
                 <div class="button-container">
-                    <a href="/users/profile"><button type="submit" class="btn btn-edit">Cancelar</button></a>
-                    <button type="submit" class="btn btn-edit">Guardar</button>
-                </div> 
-            </form>
+                    <a href="/users/profile/edit/<%= user.id %>"><button class="btn btn-edit">Editar</button></a>
+                </div>
     </div>
     <%- include('../partials/footer.ejs') %>
 

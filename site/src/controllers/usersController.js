@@ -1,5 +1,6 @@
 let { getUsers, writeUsersJson } = require('../data/dataBase');
 let { validationResult } = require('express-validator');
+let bcrypt = require('bcryptjs')
 
 module.exports = {
     /* Login form */
@@ -12,7 +13,56 @@ module.exports = {
     },
     /* User profile */
     profile: (req, res) =>{
-        res.render('users/editProfile')
+        let user = getUsers.find(user => user.id === req.session.user.id);
+
+        res.render('users/userProfile', {
+            user
+        })
+    },
+    editProfile: (req, res) => {
+        let user = getUsers.find(user => user.id === +req.params.id)
+
+        res.render('users/editProfile', {
+            user,
+            session: req.session
+        })
+    },
+    updateProfile: (req, res) => {
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()) {
+            let user = getUsers.find(user => user.id === +req.params.id)
+
+            let {
+                name,
+                lastname,
+                tel,
+                address,
+                dni
+            } = req.body
+
+            user.name = name
+            user.lastname = lastname
+            user.tel = tel
+            user.address = address
+            user.dni = dni
+            user.avatar = req.file ? req.file.filename : user.avatar
+
+            writeUsersJson(getUsers);
+
+            delete user.contraseña;
+
+            req.session.user = user;
+
+            res.redirect('/users/profile');
+
+        } else {
+            res.render('users/editProfile', {
+                errors: errors.mapped(),
+                old: req.body,
+                bodysession: req.session
+            })
+        }
     },
     /* User password */
     password: (req, res) => {
@@ -42,7 +92,7 @@ module.exports = {
                 name,
                 lastname,
                 email,
-                contraseña: password,
+                contraseña: bcrypt.hashSync(password, 12),
                 avatar: req.file ? req.file.filename : 'default-image.png',
                 rol: 'ROL_USER',
                 tel: '',
@@ -69,11 +119,25 @@ module.exports = {
         let errors = validationResult(req);
 
         if(errors.isEmpty()) {
+            let user = getUsers.find(user => user.email === req.body.email);
+
+            req.session.user = {
+                id: user.id,
+                name: user.name,
+                lastname: user.lastname,
+                email: user.email,
+                avatar: user.avatar,
+                rol: user.rol
+            }
+
+            res.locals.user = req.session.user;
+
+            res.redirect('/');
 
         } else {
             res.render('users/login', {
                 errors: errors.mapped()
             })
         }
-    },
+    }
 }

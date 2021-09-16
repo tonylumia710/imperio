@@ -1,16 +1,3 @@
 [
-    {
-        "id": 1,
-        "name": "Santiago",
-        "lastname": "Juarez",
-        "email": "santiagogjuarez@gmail.com",
-        "contraseña": "Santiago94",
-        "avatar": "default-image.png",
-        "rol": "ROL_USER",
-        "tel": "",
-        "address": "",
-        "dni": "",
-        "city": "",
-        "province": ""
-    }
+   
 ]

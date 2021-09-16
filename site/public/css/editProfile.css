@@ -36,28 +36,29 @@ span.error-message {
 
 input.input-style {
     border:  none;
-    border-radius: 1rem;
+    border-radius: 5px;
     height: 2.5rem;
     padding: 0.5rem;
+    width: 100%;
 }
 input.input-style::placeholder {
     color: lightgray;
 }
 .input-file-container {
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 5px;
     height: 2.5rem;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
     width: 100%;
-
+    margin-top: 20px;
 
 }
 select.input-select {
     border: none;
-    border-radius: 1rem;
+    border-radius: 5px;
     width: 10.5rem;
     padding: 0.5rem;
 }
@@ -69,7 +70,9 @@ select.input-select:focus {
 }
 
 label {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    margin-right: 5%;
+    align-self: center;
 }
 
 /*botones*/
@@ -152,8 +155,6 @@ label {
 }
 
 
-
-
 .profile .form-container {
     width: 100%;
 
@@ -169,7 +170,7 @@ label {
     align-items: center;
     
 }
-.profile-box h4 {
+.profile-box h3 {
     margin-bottom: 1rem;
     color: #d9d9d9;
 }
@@ -185,10 +186,18 @@ label {
 .profile .avatar {
     width: 10rem;
     height: 10rem;
-    background-color: thistle;
+    background-color: white;
     margin: 0;
     border-radius: 50%;
 }
+
+.profile .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 /* Tablet */
 
 @media screen and (min-width: 475px) {
@@ -226,14 +235,20 @@ label {
     .profile-form {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .profile .button-container {
+        display: flex;
         flex-direction: row;
         margin-top: 2rem;
         gap: 20px;
         justify-content: center;
     }
 
+}
+
+.profile-box .input-flex {
+    display: flex;
+    align-content: center;
 }

@@ -3,6 +3,8 @@ let app = express();
 let port = 3000;
 let path = require('path');
 let methodOverride = require('method-override');
+let session = require('express-session');
+let cookieParser = require('cookie-parser')
 
 /* ENRUTADORES */
 let indexRouter = require('./routes/index');
@@ -19,6 +21,13 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(cookieParser());
+app.use(session({
+    secret: 'muebleriaImperio',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 60 * 10000 }
+}));
 
 /* RUTAS */
 app.use('/', indexRouter);

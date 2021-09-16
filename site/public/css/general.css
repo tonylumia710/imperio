@@ -13,6 +13,7 @@
 @import url('editProfile.css');
 @import url('adminHeader.css');
 @import url('adminProducts.css');
+@import url('profile.css');
 
 * {
     margin: 0;
