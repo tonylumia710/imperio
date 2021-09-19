@@ -4,11 +4,13 @@ let { register, login, profile, password, processRegister, processLogin, editPro
 let loginValidator = require('../validations/loginValidator');
 let registerValidator = require('../validations/registerValidator');
 let uploadUsersAvatar = require('../middlewares/uploadUserAvatarFiles');
+let userSessionCheck = require('../middlewares/userSessionCheck');
+let userLog = require('../middlewares/userLog');
 
 /* GET */
-router.get('/register', register); /* Vista del formulario de registro */
-router.get('/login', login); /* Vista del formulario de login */
-router.get('/profile', profile); /* Vista del perfil de usuario */
+router.get('/register', userLog, register); /* Vista del formulario de registro */
+router.get('/login', userLog, login); /* Vista del formulario de login */
+router.get('/profile', userSessionCheck, profile); /* Vista del perfil de usuario */
 router.get('/password', password); /* Vista del formulario de recuperación de contraseña */
 router.get('/profile/edit/:id', editProfile); 
 router.get('/logout', logout)
