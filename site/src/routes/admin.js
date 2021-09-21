@@ -7,7 +7,7 @@ let productValidator = require('../validations/productValidator');
 let userAdminCheck = require('../middlewares/userAdminCheck');
 
 /* GET */
-router.get('/', index); /* Índice */
+router.get('/', userAdminCheck, index); /* Índice */
 router.get('/create', userAdminCheck, viewCreate); /* Vista de creación de producto */
 router.get('/edit/:id', userAdminCheck, viewEdit); /* Vista de edición de producto */
 router.get('/products', userAdminCheck, products); /* Listado de productos */
