@@ -1,0 +1,33 @@
+<div class="section-cards-imperio1">
+    <div class="cardsnproduct">
+        <div class="nuevos-productos">
+            <h1><%= titleCards %></h1>
+        </div>
+        <% productsCards.forEach(product => {%>
+        <div class="cardimp">
+
+            
+            <div class="img-sectionimp">
+                <img src="images/products/<%= product.image[0] %>" alt="puede contener un gran mueble de Imperio">
+            </div>
+            <div class="descripcionimp">
+                <h2> <%= product.productName %> </h2>
+                <p><b>Precio</b><span>$<%= product.price %></span> </p>                    
+            </div>
+            <div class="button-group">
+                <a href="/product/productDetail/<%= product.id %>" class="detalles">Ver detalles</a>
+                <a href="#" class="añadir">Añadir al carrito</a>
+            </div>
+            <div class="star-icons">
+                <a href=""><i class="fas fa-star"></i></a>
+                <a href=""><i class="fas fa-star"></i></a>
+                <a href=""><i class="fas fa-star"></i></a>
+                <a href=""><i class="fas fa-star"></i></a>
+                <a href=""><i class="fas fa-star-half-alt"></i></a>
+            </div>     
+        </div>
+        <% }) %>
+           
+                            
+    </div>
+</div>
